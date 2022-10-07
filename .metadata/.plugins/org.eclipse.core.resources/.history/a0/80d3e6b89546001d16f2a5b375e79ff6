@@ -1,0 +1,45 @@
+package IntroduccionProgramacion;
+
+import java.util.Scanner;
+
+public class CalculoDepreciacionActivos {
+
+	public static void main(String[] args) {
+	
+		int MetodoUti,CostoAct,AVU,VR;
+Scanner SC = new Scanner(System.in);
+
+System.out.println("Bienvenido.Este programa puede calcular la depreciacion de activos de una empresa. ");
+System.out.println("Existen 4 tipos de metodo para calcular la depreciacion.Son los siguientes:");
+System.out.println("1.Metodo de linea recta");
+System.out.println("2.Metodo de la suma de los digitos por año");
+System.out.println("3.Metodo de las unidades producidas");
+System.out.println("4.Metodo de reduccion de saldo");
+System.out.println("¿ Cual desea utilizar ?");
+MetodoUti = SC.nextInt();
+
+switch (MetodoUti) {
+case 1: {
+	
+	System.out.println("-------- Metodo de linea recta --------");
+	System.out.println("Ingrese el costo del activo");
+	CostoAct=SC.nextInt();
+	
+	System.out.println("Ingrese los años de vida util ");
+    AVU=SC.nextInt();
+    
+    System.out.println(" Ingrese el valor residual estimado ");
+    VR=SC.nextInt();
+    
+    
+}
+
+}
+
+
+		
+		
+SC.close();		
+	}
+
+}

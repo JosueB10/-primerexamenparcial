@@ -1,0 +1,10 @@
+package IntroduccionProgramacion;
+
+public class CalculoDepreciacionActivos {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
