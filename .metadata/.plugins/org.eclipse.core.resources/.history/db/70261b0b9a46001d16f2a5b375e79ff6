@@ -66,14 +66,9 @@ case 2: {
 	  System.out.println("La suma de los "+ AVU +" años de vida  es: "+ suma);
     
     int ImpDep=(CostoAct-VR);
-    int Fraccion=(AVU/suma);
-    double por=(33*100);
-   
-    Metododep2=(ImpDep*Fraccion);
+    Metododep2=(ImpDep);
     
-    double Metododep2_5=(Metododep2*por); 
-    
-	System.out.println("La depreciacion anual es de: "+Metododep2_5);
+	
 	
 	
 	

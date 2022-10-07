@@ -67,7 +67,7 @@ case 2: {
     
     int ImpDep=(CostoAct-VR);
     int Fraccion=(AVU/suma);
-    double por=(33*100);
+    double por=(33.33*100);
    
     Metododep2=(ImpDep*Fraccion);
     

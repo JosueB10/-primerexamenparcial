@@ -9,7 +9,9 @@ public class CalculoDepreciacionActivos {
 		int MetodoUti,CostoAct,AVU,VR;
 		int Metododep1,Metododep2,Metododep3,Metododep4;
 		
-				
+		//Variables del metodo de la suma de los digitos por año
+		int IDA=(CostoAct-VR),Fraccion=(AVU);
+		
 Scanner SC = new Scanner(System.in);
 
 System.out.println("Bienvenido.Este programa puede calcular la depreciacion de activos de una empresa. ");
@@ -54,37 +56,13 @@ case 2: {
     System.out.print(" Ingrese el valor residual estimado: ");
     VR=SC.nextInt();
     
-    int suma=0;
+    Metododep2=(IDA*Fraccion);
+    
 	
-	  
-	  
-	  for(int i=1;i <=AVU; i++) {
-		  
-		  suma=suma+i;
-	  }
-	
-	  System.out.println("La suma de los "+ AVU +" años de vida  es: "+ suma);
-    
-    int ImpDep=(CostoAct-VR);
-    int Fraccion=(AVU/suma);
-    double por=(33*100);
-   
-    Metododep2=(ImpDep*Fraccion);
-    
-    double Metododep2_5=(Metododep2*por); 
-    
-	System.out.println("La depreciacion anual es de: "+Metododep2_5);
 	
 	
 	
 }break;
-
-
-
-
-
-
-
 }
 
 
