@@ -1,5 +1,6 @@
 package IntroduccionProgramacion;
 
+
 import java.util.Scanner;
 
 public class CalculoDepreciacionActivos {
@@ -7,17 +8,20 @@ public class CalculoDepreciacionActivos {
 	public static void main(String[] args) {
 	
 		int MetodoUti,CostoAct,AVU,VR;
-		int Metododep1,Metododep2,Metododep3,Metododep4;
-		
-				
+		int Metododep1,Metododep3,Metododep4;
+		int a=0;		
+		double Metododep2;
 Scanner SC = new Scanner(System.in);
-
+while (a<100) {
+	
+	System.out.println(" ");
 System.out.println("Bienvenido.Este programa puede calcular la depreciacion de activos de una empresa. ");
 System.out.println("Existen 4 tipos de metodo para calcular la depreciacion.Son los siguientes:");
 System.out.println("1.Metodo de linea recta");
 System.out.println("2.Metodo de la suma de los digitos por año");
 System.out.println("3.Metodo de las unidades producidas");
 System.out.println("4.Metodo de reduccion de saldo");
+System.out.println("5.Salir de la app");
 System.out.println("¿ Cual metodo desea utilizar ?");
 MetodoUti = SC.nextInt();
 
@@ -35,9 +39,13 @@ case 1: {
     VR=SC.nextInt();
     
     
+    
     Metododep1=(CostoAct-VR)/AVU;
     
+    
     System.out.println("La depreciacion anual es de: " +Metododep1);
+    System.out.println("");
+    System.out.println("");
     
     
 }break;
@@ -54,40 +62,81 @@ case 2: {
     System.out.print(" Ingrese el valor residual estimado: ");
     VR=SC.nextInt();
     
-    int suma=0;
-	
+double suma=0;
 	  
 	  
 	  for(int i=1;i <=AVU; i++) {
 		  
 		  suma=suma+i;
+		  
 	  }
-	
-	  System.out.println("La suma de los "+ AVU +" años de vida  es: "+ suma);
+	    int ImpDep=(CostoAct-VR);
+
+	  System.out.println("La suma de los "+ AVU +" años de vida util es: "+ suma);
+	  System.out.println(" ");
+	  
+	    System.out.println("El importe de depreciacion es de:" +ImpDep);
+
     
-    int ImpDep=(CostoAct-VR);
-    int Fraccion=(AVU/suma);
-    double por=(33*100);
-   
-    Metododep2=(ImpDep*Fraccion);
+System.out.println(" ");
+
+
+
+      for( int k=AVU; k>=1 ;k--) {
+  	    
+
+  	  	double fraccion=k/suma;
+        Metododep2=(ImpDep*fraccion);
+
+
+
+        System.out.println("La depreciacion anual es : " +String.format("%.2f",Metododep2)+ " aproximadamente ");
+
+                
+      }
+  	
+
+
     
-    double Metododep2_5=(Metododep2*por); 
     
-	System.out.println("La depreciacion anual es de: "+Metododep2_5);
-	
-	
+    
+  
+   	
 	
 }break;
 
-
-
-
-
-
-
+case 3: {
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
 
 
+case 5:{
+	
+	System.out.println("Saliendo de la app....");
+	a=101;
+	break;
+}
+default: {
+	
+	System.out.println("Ingrese una opcion valida.Intente nuevamente... ");
+    System.out.println(" ");
+    
+	
+}
+
+}
+
+}
 		
 		
 SC.close();		
